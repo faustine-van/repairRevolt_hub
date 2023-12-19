@@ -1,0 +1,16 @@
+Deletes a specific review.
+---
+tags:
+  - reviews
+parameters:
+  - name: review_id
+    in: path
+    type: string
+    required: true
+    description: The id of the review to retrieve
+operationId: deleteSpecificReview
+responses:
+  404:
+    description: review not found!
+  200:
+    description: Review deleted successfully

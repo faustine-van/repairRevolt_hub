@@ -1,0 +1,35 @@
+Update exist user.
+---
+tags:
+  - users
+operationId: UpdateUser
+parameters:
+  - name: user_id
+    in: path
+    type: string
+    required: true
+    description: The id of the user to updated
+  - name: user
+    in: body
+    required: true
+    description: User to be updated
+    schema:
+      type: object
+      required: 
+        - full_name: 
+      properties:
+        full_name:
+           type: string
+        email:
+           type: string 
+        password:
+           type: string
+      example:
+        full_name: Edit
+        email: edit@gmail.com
+        password: edit1234
+responses:
+  404:
+    description: user not found!
+  201:
+    description: Updated successfully

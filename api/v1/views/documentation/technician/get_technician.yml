@@ -1,0 +1,16 @@
+Retrieves a specific technician.
+---
+tags:
+  - technicians
+operationId: getTechnician
+parameters:
+  - name: technician_id
+    in: path
+    type: string
+    required: true
+    description: The id of the technician to retrieve
+responses:
+  404:
+    description: technician not found!
+  200:
+    description: Executed successfully

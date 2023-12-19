@@ -1,0 +1,16 @@
+Retrieves a specific review.
+---
+tags:
+  - reviews
+operationId: getReview
+parameters:
+  - name: review_id
+    in: path
+    type: string
+    required: true
+    description: The id of the review to retrieve
+responses:
+  404:
+    description: review not found!
+  200:
+    description: Executed successfully

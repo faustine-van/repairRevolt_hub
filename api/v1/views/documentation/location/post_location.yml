@@ -1,0 +1,30 @@
+Create a new location.
+---
+tags:
+  - locations
+operationId: createLocation
+parameters:
+  - name: location
+    in: body
+    required: true
+    description: Location to be created
+    schema:
+      type: object
+      required:
+        - full_name:
+      properties:
+        country:
+           type: string
+        city:
+           type: string
+        district:
+           type: string
+        sector:
+           type: string
+        celll:
+           type: string
+responses:
+  404:
+    description: location not found!
+  201:
+    description: Executed successfully

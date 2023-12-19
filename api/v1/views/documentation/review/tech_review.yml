@@ -1,0 +1,23 @@
+list of reviews for technciains
+---
+tags:
+  - technicians
+summary: Retrieves the list of all review of specific technician
+description: ""
+operationId: getReviewsOfTechnician
+consumes:
+- application/x-www-form-urlencoded
+produces:
+- application/json
+- application/xml
+parameters:
+- name: technician_id
+  in: path
+  description: ID of technician that needs to get reviews
+  required: true
+  type: string
+responses:
+  '200':
+    description: Executed successfully.
+  '405':
+    description: Invalid input

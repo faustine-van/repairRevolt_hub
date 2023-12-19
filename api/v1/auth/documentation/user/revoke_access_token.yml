@@ -1,0 +1,12 @@
+Revoke access token
+---
+tags:
+  - auth
+operationId: revokeAccessToken
+responses:
+  404:
+    description: Failed to revoke access token
+  200:
+    description: Token revoked
+security:
+  - Bearer: []

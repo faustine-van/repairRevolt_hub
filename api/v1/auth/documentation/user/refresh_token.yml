@@ -1,0 +1,15 @@
+Refresh token
+---
+tags:
+  - auth
+operationId: refresh-token
+
+responses:
+  404:
+    description: Failed to to refresh token
+  201:
+    description: Token issued
+security:
+  - Bearer: []
+
+

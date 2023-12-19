@@ -1,0 +1,35 @@
+Update exist location.
+---
+tags:
+  - locations
+operationId: UpdateLocation
+parameters:
+  - name: location_id
+    in: path
+    type: string
+    required: true
+    description: The id of the location to updated
+  - name: location
+    in: body
+    required: true
+    description: Location to be updated
+    schema:
+      type: object
+      required:
+        - country:
+      properties:
+        country:
+           type: string
+        city:
+           type: string
+        district:
+           type: string
+        sector:
+           type: string
+        celll:
+           type: string
+responses:
+  404:
+    description: location not found!
+  201:
+    description: Updated successfull

@@ -1,0 +1,42 @@
+Create a new technician.
+---
+tags:
+  - technicians
+operationId: createTechnician
+parameters:
+  - name: technician
+    in: body
+    required: true
+    description: Technician to be updated
+    schema:
+      type: object
+      required:
+        - country:
+      properties:
+        full_name:
+           type: string
+        bio_txt:
+           type: string
+        phone_number:
+           type: string
+        social_link:
+           type: string
+        img:
+           type: string
+        user_id:
+           type: string
+        country:
+           type: string
+        city:
+           type: string
+        district:
+           type: string
+        sector:
+           type: string
+        celll:
+           type: string
+responses:
+  404:
+    description: technician not found!
+  201:
+    description: Updated successfull

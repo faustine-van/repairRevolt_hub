@@ -1,0 +1,26 @@
+Log in
+---
+tags:
+  - auth
+operationId: login
+parameters:
+  - name: body
+    in: body
+    required: true
+    description: JSON parameters.
+    schema:
+      properties:
+        email:
+           type: string 
+           description: email
+        password:
+           type: string
+           description: password
+      example:
+        email: examples@gmail.com
+        password: examples1234
+responses:
+  404:
+    description: Failed to login
+  201:
+    description: Login successfully

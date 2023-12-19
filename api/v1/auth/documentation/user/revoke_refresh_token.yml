@@ -1,0 +1,12 @@
+Revoke refresh token
+---
+tags:
+  - auth
+operationId: revokeRefreshToken
+responses:
+  404:
+    description: Failed to revoke refresh token
+  200:
+    description: Token refresh revoked
+security:
+  - Bearer: []

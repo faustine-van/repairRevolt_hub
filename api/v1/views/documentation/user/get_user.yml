@@ -1,0 +1,16 @@
+Retrieves a specific user.
+---
+tags:
+  - users
+operationId: getUser
+parameters:
+  - name: user_id
+    in: path
+    type: string
+    required: true
+    description: The id of the user to retrieve
+responses:
+  404:
+    description: user not found!
+  200:
+    description: request executed successfully

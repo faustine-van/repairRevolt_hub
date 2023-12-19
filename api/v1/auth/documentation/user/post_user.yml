@@ -1,0 +1,30 @@
+create a new user.
+---
+tags:
+  - users
+operationId: createUser
+parameters:
+  - name: user
+    in: body
+    required: true
+    description: User to be created
+    schema:
+      type: object
+      required: 
+        - full_name: 
+      properties:
+        full_name:
+           type: string
+        email:
+           type: string 
+        password:
+           type: string
+      example:
+        full_name: Examples
+        email: examples@gmail.com
+        password: examples1234
+responses:
+  404:
+    description: user not found!
+  201:
+    description: Executed successfully

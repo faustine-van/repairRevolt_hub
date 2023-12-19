@@ -1,0 +1,35 @@
+Update exist review.
+---
+tags:
+  - reviews
+operationId: UpdateReview
+parameters:
+  - name: review_id
+    in: path
+    type: string
+    required: true
+    description: The id of the review to updated
+  - name: review
+    in: body
+    required: true
+    description: Review to be updated
+    schema:
+      type: object
+      required:
+        - comment:
+      properties:
+        comment:
+           type: string
+        rating:
+           type: string
+        technicianId:
+           type: string
+      example:
+        technicianId: 1343y9-47939g-fgw
+        comment: Greate work
+        rating: 1.5
+responses:
+  404:
+    description: review not found!
+  201:
+    description: Updated successfully

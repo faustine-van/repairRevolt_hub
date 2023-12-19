@@ -1,0 +1,47 @@
+Update exist technician.
+---
+tags:
+  - technicians
+operationId: UpdateTechnician
+parameters:
+  - name: technician_id
+    in: path
+    type: string
+    required: true
+    description: The id of the technician to updated
+  - name: technician
+    in: body
+    required: true
+    description: Technician to be updated
+    schema:
+      type: object
+      required:
+        - country:
+      properties:
+        full_name:
+           type: string
+        bio_txt:
+           type: string
+        phone_number:
+           type: string
+        social_link:
+           type: string
+        img:
+           type: string
+        user_id:
+           type: string
+        country:
+           type: string
+        city:
+           type: string
+        district:
+           type: string
+        sector:
+           type: string
+        celll:
+           type: string
+responses:
+  404:
+    description: technician not found!
+  201:
+    description: Updated successfull

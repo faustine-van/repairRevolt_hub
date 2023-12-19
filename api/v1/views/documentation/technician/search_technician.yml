@@ -1,0 +1,68 @@
+Search  technciains
+---
+tags:
+  - search
+operationId: searchTechncians
+parameters:
+  - name: category
+    in: query
+    type: string
+    required: true
+    enum: ['name', 'location']
+    default: name
+  - name: location type
+    in: query
+    type: string
+    required: true
+    enum: ['country', 'city', 'district', 'sector', 'cell']
+  - name: name
+    in: query
+    type: string
+    required: true
+    example: location name, techncian name
+responses:
+  200:
+    description: Executed Successful
+    schema:
+      type: array
+      items:
+        properties:
+          created_at:
+            type: string
+            description: time of creation of the instance
+          updated_at:
+            type: string
+            description: time of last retrieve of the instance
+          id:
+            type: string
+            description: The uuid of the instance
+          full_name:
+            type: string
+            description: The technician's full_name
+          bio_text:
+            type: text
+            description: technician's biography
+          phone_number:
+            type: string
+            description: technician's phone_number
+          socia_link:
+            type: string
+            description: The technician's social link
+          img:
+             type: text
+             description: technician's image
+          user_id:
+             type: string
+             description: technician id in users
+        example:
+          created_at: 2023-12-07T20:41:15.000000
+          updated_at: 2023-12-07T20:41:15.000000
+          id: 1234-fdsj88is99jdf-c57883
+          user_id: 1234-fdsj88is99jdf-c57883
+          full_name: Jessi Smith
+          bio_text: I dent repair
+          socia_link: 1234-fdsj88is99jdf-c57883-467g0
+          phone_number: 123-456-777
+          img: 1234-fdsj88is99jdf-c57883-467g0
+  404:
+    description: Technicians not found

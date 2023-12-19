@@ -1,0 +1,40 @@
+Retrieves a list of all reviews.
+---
+tags:
+  - locations
+operationId: getAllLocation
+responses:
+  200:
+    description: Executed successfully.
+    schema:
+      type: array
+      items:
+        properties:
+          created_at:
+            type: string
+            description: time of creation of the instance
+          updated_at:
+             type: string
+             description: time of last update of the instance
+          country:
+            type: string
+            description: country
+          city:
+            type: string
+            description: city
+          district:
+            type: string
+            description: district
+          sector:
+             type: string
+             description: sector 
+          cell:
+             description: cell
+        example:
+          country: Nigeria
+          city: Bujumbura
+          district: jibon
+          sector: Jali
+          cell: Agateko
+security:
+  - Bearer: []
