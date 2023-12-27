@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --background: #fffffe;
+  --card-background: #f2f4f6;
+  --card-background-tag: #fffffe;
+  --headline: #00214d;
+  --card-headline: #00214d;
+  --card-tag-text: #00214d;
+  --paragrapy: #1b2d45;
+  --card-paragrapy: #1b2d45;
+  --card-hightlight: #ff5470;
+  --ff-1: 'Inter', sans-serif;
+  --ff-2: 'Open Sans', sans-serif;
+  --ff-3: 'Times New Roman', Times, serif;
+}
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: var(--ff-3);
+  background-color: var(--card-background);
+  line-height: 1.5;
+  color: var(--paragrapy);
+}
+h1, h2, h3, h4{
+  margin-bottom: 15px;
+}
+ul li{
+ list-style: none;
+}
+.link, .custom-link{
+  cursor: pointer;
+  text-decoration: none;
+}
+button, .button{
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.wrap{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--card-paragrapy);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  height: 40px;
+}
+.wrap .wrap-p .custom-link{
+  color: #fff;
+}
+.wrap .social-icons .custom-link{
+  font-size: 20px;
+  padding-left: 10px;
+} 
+.wrap .custom-link:hover{
+  color: var(--card-hightlight);
+}
+.header{
+  position: fixed;
+  top: 40px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+  color: var(--headline);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+.container-logo img {
+  height: 50px;
+  width: 240px;
+}
+.container-logo button {
+    padding: 8px;
+    display: none;
+    border: none;
+}
+.header .button {
+    text-decoration: none;
+}
+.header ul{
+  display:flex; 
+}
+.header ul li{
+  margin-left: 10px;
+}
+.header ul li ul{
+  display: none;
+}
+.header ul li:hover ul{
+  display: block;
+  position: absolute;
+  border-radius: 6px;
+  padding :5px; 
+  background: #fff;
+}
+.header ul li:hover ul li{
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px; 
+}
+.header ul li:hover ul li:hover{
+  background: #D4DBE2;
+}
+.header ul li:hover ul li .icon {
+ margin-right: 5px;
+}
+.header ul li:hover ul li a {
+  width: 100%;
+  font-size: 16px
+}
+.header ul li .link{
+  color: #333;
+  padding: 5px 10px;
+}
+.header ul li .link:hover{
+  color: #555;
+  background: #D4DBE2;
+  border-radius: 5px;
+  
+}
+.header ul li a.active{
+  background: #D4DBE2;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/*login*/
+.btn-group1{
+  margin-right: 40px;
+  width: 250px;
+}
+.btn-group{
+  display: flex;
+  margin-right: 10px;
+}
+.btn-group .btn-login{
+    color: #333;
+}
+.btn-group .btn-login{
+  border: none;
+  padding: 10px 20px 10px;
+  color: #333; 
+}
+.btn-group .btn-login span{
+  margin-right: 5px;
+  color: var(--headline);
+}
+.btn-group .btn-signup:hover{
+  background-color: #ff6b8b;
+}
+.btn-group .btn-signup{
+  border: none;
+  padding: 10px 20px 10px;
+  background-color: var(--card-hightlight);
+  color: #fff;
+  border-radius: 10px;
+}
+.btn-group .btn-signup:hover{
+  padding: 10px 20px 10px;
+  background-color: #ff6b8b;
+}
+.btn-group .btn-login:hover{
+  background: #D4DBE2;
+  border-radius: 10px;
+  padding: 10px 20px 10px;
+}
+.btn-group .btn-signup span{
+  margin: 3px;
+}
+
+/**** Sidebar  ****/
+.visible{
+  margin-left: 0;
+}
+.hidden{
+  margin-left: -260px;
+}
+
+.display-bar {
+  background-color: var(--card-paragrapy);
+  width: 260px;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  padding: 20px 10px;
+  z-index: 100;
+  /*overflow-y: scroll;*/
+  box-shadow: 0 0 1px grey;
+  top: 110px;
+  transition: margin-left 5s;
+  transition: all 0.5s ease;
+}
+.display-bar .close {
+  width: 100%;
+  display:flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.display-bar .close span {
+  font-size: 25px;
+}
+
+.display-bar.menu_content {
+  position: relative;
+  color: white;
+}
+
+.display-bar.menu_title {
+  margin: 5px 0;
+}
+
+
+.display-bar .menu_title::before {
+  color: grey;
+  white-space: nowrap;
+}
+
+.display-bar .menu_dahsboard::before {
+  content: "Search Technicians";
+}
+.display-bar .menu_items {
+  padding: 0;
+  list-style: none;
+}
+
+.display-bar .navlink_icon {
+  position: relative;
+  min-width: 50px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+}
+
+.display-bar.navlink_icon::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 100px);
+}
+
+.display-bar .navlink_icon:hover {
+  color: var(--headlines);
+}
+
+.display-bar .nav_link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.display-bar .nav_link:hover {
+  color: var(--headline);
+  background: var(--card-background);
+}
+
+.bottom-sidebar .button{
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  padding: 9px 9px 9px;
+  background-color: var(--card-hightlight);
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+}
+.bottom-sidebar .button:hover{
+  background-color: #ff6b8b;
+}
+.display-bar .bottom {
+  position: absolute;
+  padding: 10px 10px;
+}
+.bottom-sidebar .bottom{
+    bottom: -70px;
+}
+
+
+
+@media(max-width: 768px){
+  .header ul{
+    display: none;
+  }
+  .container-logo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .container-logo button{
+    display: block;
+    margin-right: 10px;
+  }
+  .container-logo button{
+    display: block;
+    margin-right: 10px;
+    background: transparent;
+    outline: none;
+  }
+  .container-logo button img{
+    width: 30px;
+    height: 30px;
+  }
+}

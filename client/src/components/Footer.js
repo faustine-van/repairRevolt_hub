@@ -5,28 +5,31 @@ import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-
 
 const FooterPage = () => {
   return (
-    <footer className="footer text-white py-4 mt-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            <h5 class="h4 disabled">Links</h5>
-            <ul className="list-unstyled">
+    <footer className="footer">
+      <div className="">
+        <div className="footer-row">
+          <div className="footer1">
+            <h5 className="h4">Links</h5>
+             <ul className="list-unstyled">
               <li>
-                <Link href="#instagram" className="a1 text-white">
-                  Auto body services
+                <Link href="#home" className="text-white a1">
+                  Technicians
                 </Link>
               </li>
-            </ul>
-            <ul className="list-unstyled">
               <li>
-                <Link href="#instagram" className="text-white a1">
-                  Privacy Policy
+                <Link href="#home" className="text-white a1">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="#home" className="text-white a1">
+                  Help
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="col-md-6">
-            <h5 class="h4 disabled">Menu</h5>
+          <div className="footer2">
+            <h5 className="h4">Menu</h5>
             <ul className="list-unstyled">
               <li>
                 <Link href="#home" className="text-white a1">
@@ -46,11 +49,11 @@ const FooterPage = () => {
             </ul>
           </div>
         </div>
-        <div className="row custom-copy">
-          <div className="col-md-6">
-            <p>&copy; 2023 Your Company. All rights reserved. By <a>Faustine</a></p>
+        <div className="custom-copy">
+          <div className="copy-right">
+            <p>&copy; 2023 Your Company. All rights reserved. By <a href="http://localhost:5000/docs/" >Faustine</a></p>
           </div>
-          <div className="col-md-6 text-md-right">
+          <div className="social-right">
             <div className="col d-flex justify-content-center">
               <div className="social-media">
                 <p className="mb-0 d-flex">

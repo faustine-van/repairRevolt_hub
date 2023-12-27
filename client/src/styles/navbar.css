@@ -21,13 +21,17 @@
   --ff-2: 'Open Sans', sans-serif;
   --ff-3: 'Times New Roman', Times, serif;
 }
-
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
-  font-size: var(--fp);
+  font-size: 18px;
   font-family: var(--ff-2);
   background-color: var(--card-background);
+  line-height: 1.5;
+  color: var(--paragrapy);
 }
 
 h1,
@@ -61,57 +65,15 @@ h6,
   font-size: 1.15rem;
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.display-1 {
-  font-size: 6rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.display-4 {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 small,
 .small {
   font-size: 80%;
   font-weight: 400;
 }
 
-mark,
-.mark {
-  padding: 0.2em;
-  background-color: #fcf8e3;
-}
-
 .a {
-  color: var(--headline);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .a1 {
@@ -128,31 +90,41 @@ button {
 /*-----start-----*/
 .wrap {
   background-color: var(--card-paragrapy);
+  padding: 2px;
 }
 
-.custom-link {
+.phone .custom-link {
   color: white;
   text-decoration: none;
   padding: 10px;
+}
+.social-media{
+  padding: 4px 0;
+}
+.social-media .custom-link:first-child{
+  border-left: 1px solid var(--card-background);
+}
+.social-media .custom-link{
+  border-right: 1px solid var(--card-background);
+  color: var(--card-background);
+  padding: 5px;
   text-decoration: none;
 }
-
 .custom-link:hover {
-  color: var(--card-background);
+  color: var(--card-hightlight);
 }
 
 .ftco-section .navbar {
   background-color: var(--background);
   box-shadow: 2px;
 }
-
 .navbar .nav-link {
   color: var(--paragraph);
   font-family: var(--ff-3);
   font-weight: 700;
   font-size: 18px;
 }
-.navbar .active {
+.navbar .back {
   color: var(--card-hightlight);
 }
 
@@ -202,7 +174,7 @@ button {
 }
 
 @media (max-width: 600px) {
-  .btns {
+  .searchform, .navbar-nav {
     display: none;
   }
 }

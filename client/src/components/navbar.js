@@ -71,7 +71,7 @@ const LoggedOutLinks = () => {
       <div id='ftco-nav'>
         <ul className='navbar-nav m-auto'>
           <li className='nav-item'>
-            <Link className='nav-link active' to='/'>Home</Link>
+            <Link className='nav-link' to='/'>Home</Link>
           </li>
           <li className='nav-item dropdown'>
             <Link
@@ -97,7 +97,7 @@ const LoggedOutLinks = () => {
             <Link className='nav-link active' to='/technicians'>Technicians</Link>
           </li>
           <li className='nav-item'>
-            <Link to='/about' className='nav-link'>
+            <Link to='/about' className='nav-link active'>
               About us
             </Link>
           </li>

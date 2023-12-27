@@ -50,12 +50,13 @@ const LoginPage = () => {
     <div className="container signup mt-3">
       <div className="row mb-3" height="700">
         <div className="col-md-6 signup1" style={{ maxHeight: '93vh' }}>
+          <img className="mb-1" src={process.env.PUBLIC_URL + '/img/about.jpg'} alt="" width="450"  />
         </div>
         <div className="col-md-6 signup2" style={{ maxHeight: '93vh' }}>
           <main className="form-signin w-100 m-auto">
             <form className="h-custom">
               <div className="d-flex justify-content-center">
-                <img className="mb-1" src={process.env.PUBLIC_URL + '/img/designer-two-color.png'} alt="" width="80" height="70" />
+                <img className="mb-1" src={process.env.PUBLIC_URL + '/img/about.jpg'} alt="" width="80" height="70" />
               </div>
 
               {show ?
@@ -86,7 +87,7 @@ const LoginPage = () => {
                 <div className="col-md-6">
                   <div className="form-check text-start my-3">
                     <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
-                    <label className="form-check-label" for="flexCheckDefault">
+                    <label className="form-check-label" htmlFor="flexCheckDefault">
                       Remember me
                     </label>
                   </div>

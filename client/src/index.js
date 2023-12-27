@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/navbar.css'
+import './styles/header.css'
 import './styles/signup.css'
 import './styles/footer.css'
 import './styles/home.css'

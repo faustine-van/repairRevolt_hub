@@ -202,15 +202,17 @@
 
 /************Profile card*****************/
 .profiles {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    /*flex-wrap: wrap;*/
-    flex-flow: row wrap;
-    justify-content: space-around;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  flex-flow: row wrap;
+  justify-content: space-around;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 5s infinite;
 }
 
-.search-bar .card {
+.Search-output .card {
     margin: auto;
     margin-bottom: 20px;
     width: 230px;
@@ -220,12 +222,12 @@
     font-family: var(--ff-3);
 }
 
-.search-bar .card:hover {
+.Search-output .card:hover {
     border: 1px solid var(--headline);
     box-shadow: 0 0 5px 0 rgba(106, 98, 210);
 }
 
-.search-bar .img-p {
+.Search-output .img-p {
     margin-top: 10px;
     vertical-align: middle;
     width: 100px;
@@ -234,18 +236,18 @@
     padding: 5px;
 }
 
-.search-bar .card h5 {
+.Search-output .card h5 {
     color: var(--headline);
     margin-top: 5px;
     font-weight: 700;
     font-size: 15px;
 }
 
-.search-bar .card h6 {
+.Search-output .card h6 {
     color: #333;
 }
 
-.search-bar .card .btn-view {
+.Search-output .card .btn-view {
     background: var(--headline);
     box-shadow: none;
     border: none;
@@ -255,12 +257,12 @@
     width: 180px;
 }
 
-.search-bar .card .btn-view:hover {
+.Search-output .card .btn-view:hover {
     background: var(--card-hightlight);
     color: white;
 }
 
-.search-bar .card .btn-view:focus {
+.Search-output .card .btn-view:focus {
     background: var(--headline);
     box-shadow: none;
 }

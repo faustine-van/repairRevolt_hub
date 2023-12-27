@@ -50,12 +50,13 @@ const SignupPage = () => {
     <div className="container mt-3">
       <div className="row mb-3 signup">
         <div className="col-md-6 signup1" style={{ maxHeight: '93vh' }}>
+            <img className="mb-1" src={process.env.PUBLIC_URL + '/img/about.jpg'} alt="" width="450px" />
         </div>
         <div className="col-md-6 signup2" style={{ maxHeight: '93vh' }}>
-          <main class="form-signin w-100 m-auto">
-            <form class="h-custom">
-              <div class="d-flex justify-content-center">
-                <img class="mb-1" src={process.env.PUBLIC_URL + '/img/designer-two-color.png'} alt="" width="80" height="70" />
+          <main className="form-signin w-100 m-auto">
+            <form className="h-custom">
+              <div className="d-flex justify-content-center">
+                <img className="mb-1" src={process.env.PUBLIC_URL + '/img/about.jpg'} alt="" width="80" height="70" />
               </div>
               {show ?
                 <>
@@ -68,38 +69,38 @@ const SignupPage = () => {
                   </Alert>
                 </>
                 :
-                <h1 class="h2 mb-3 fw-bold text-center">Sign up</h1>
+                <h1 className="h2 mb-3 fw-bold text-center">Sign up</h1>
               }
 
-              <div class="form-floating">
-                <input type="name" class="form-control" placeholder="Full name"
+              <div className="form-floating">
+                <input type="name" className="form-control" placeholder="Full name"
                   {...register("full_name", { required: true, maxLength: 25 })} />
                 <label htmlFor="floatingInput">Full name</label>
               </div>
               {errors.full_name && <span style={{ color: "#ff5470", }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade /> <small> Full name is required</small></span>}
               {errors.email?.type === "maxLength" && <span style={{ color: "#ff5470" }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade /> <small>Max characters should be 80</small></span>}
-              <div class="form-floating">
-                <input type="email" class="form-control" placeholder="name@example.com"
+              <div className="form-floating">
+                <input type="email" className="form-control" placeholder="name@example.com"
                   {...register("email", { required: true, maxLength: 60 })} />
                 <label htmlFor="floatingInput">Email address</label>
               </div>
               {errors.email && <span style={{ color: "#ff5470", }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade />  <small> Email is required</small></span>}
               {errors.email?.type === "maxLength" && <span style={{ color: "#ff5470" }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade /> <small>Max characters should be 60</small></span>}
-              <div class="form-floating" >
-                <input type="password" class="form-control" placeholder="Password"
+              <div className="form-floating" >
+                <input type="password" className="form-control" placeholder="Password"
                   {...register("password", { required: true, minLength: 8 })} />
                 <label htmlFor="floatingPassword">Password</label>
               </div>
-              {errors.password && <span class="" style={{ color: "#ff5470", }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade /> <small> Password is required</small></span>}
+              {errors.password && <span className="" style={{ color: "#ff5470", }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade /> <small> Password is required</small></span>}
               {errors.password?.type === "minLength" && <span style={{ color: "#ff5470" }}> <FontAwesomeIcon icon={faCircleExclamation} beatFade /> <small>Max characters should be 8</small></span>}
 
-              <div class="text-end my-3">
-                <small class="mt-1 mb-3 text-body-secondary text-center">Already have an Account <Link class="a" to="/login">Log in</Link></small>
+              <div className="text-end my-3">
+                <small className="mt-1 mb-3 text-body-secondary text-center">Already have an Account <Link className="a" to="/login">Log in</Link></small>
               </div>
-              <div class="d-flex justify-content-center">
-                <button class="btn btn-sign w-50 py-2" type="submit" onClick={handleSubmit(submitForm)}>Join <FontAwesomeIcon icon={faArrowRightLong} /> </button>
+              <div className="d-flex justify-content-center">
+                <button className="btn btn-sign w-50 py-2" type="submit" onClick={handleSubmit(submitForm)}>Join <FontAwesomeIcon icon={faArrowRightLong} /> </button>
               </div>
-              <p class="mt-1 text-body-secondary text-center">By joining you agree to the <Link class="a">Terms</Link> and  <Link class="a">Privacy policy</Link></p>
+              <p className="mt-1 text-body-secondary text-center">By joining you agree to the <Link className="a">Terms</Link> and  <Link className="a">Privacy policy</Link></p>
             </form>
           </main>
         </div>

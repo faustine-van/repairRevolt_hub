@@ -22,7 +22,6 @@
   background-color: var(--card-paragrapy);
   width: 260px;
   position: fixed;
-  top: 0;
   left: 0;
   height: 100%;
   padding: 20px 10px;
@@ -32,20 +31,7 @@
   transition: all 0.5s ease;
 }
 
-.section {
-  position: absolute;
-  left: 260px;
-  /* Adjust this value based on the width of the sidebar */
-  top: 0;
-  width: calc(100% - 260px);
-  /* Adjust for the width of the sidebar */
-  height: 100%;
-  padding: 20px;
-  /* Add padding as needed */
-  transition: all 0.5s ease;
-}
-
-.sidebar.close+.section {
+.sidebar.close + .section {
   left: 80px;
   /* Adjust for the closed sidebar */
   width: calc(100% - 80px);
@@ -172,7 +158,7 @@
   display: none;
 }
 
-.show_submenu~.submenu {
+.show_submenu ~ .submenu {
   display: block;
 }
 
@@ -253,135 +239,123 @@
     left: -100%;
   }
 }
+/*search filter*/
 
-/*************search****************/
-/*search section*/
-.search-card {
+.section {
+  position: absolute;
+  left: 260px;
+  top: 0;
+  width: calc(100% - 260px);
+  height: 100%;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+.search-section {
+  background-color: #f0f0f0;
+}
+
+.search-section h2 {
+  color: #333;
+}
+
+.search-section p {
+  color: #666;
+  margin-bottom: 20px;
+}
+.search-section .search-parts{
+  display: flex;
+  justify-content: space-between;
+
+}
+.search-section .search-filter{
+  background: #fff;
+  padding: 0;
+  border-radius: 5px;
+}
+.search-section .search-filter .options{
+  padding: 10px 10px;
+  width: 200px;
+  cursor: pointer;
+}
+.search-section .search-filter .options:hover ul{
+  padding: 10px 10px;
+  display: block;
+  position: absolute;
+}
+.search-section .search-filter .options ul{
+  display: none;
+  background: #fff;
+}
+.search-section .search-filter .options ul li{
+  padding: 5px 10px;
+}
+.search-section .search-filter .options ul li:hover{
+  background: #D4DBE2;
+  border-radius: 5px;
+}
+
+.search-section .search-container {
+  max-width: 800px;
+  background: #fff;
+  padding: 0;
+  border-radius: 5px;
+}
+.search-section .search-container:hover {
+  border: 2px solid var(--headline);
+  box-shadow: 0 0 5px 0 rgba(106, 98, 210);
+}
+
+.search-section form {
   display: flex;
   flex-direction: column;
 }
-
-/* Style for the form container */
-#searchForm {
+.search-section .search-inputs {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 20px auto;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.selectName {
-  width: 23%;
-  box-sizing: border-box;
-  margin-bottom: 5px;
-  margin-right: 3px;
-}
-
-.selectLocation {
-  width: 22%;
-  box-sizing: border-box;
-  margin-bottom: 5px;
-  margin-right: 3px;
-}
-
-/* Style for labels */
-#searchForm label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-/* Style for the select element */
-#searchForm select {
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  background: var(--card-background);
-  padding: 8px;
   width: 100%;
-  transition: border-color 0.3s ease;
 }
-
-#searchForm select:hover {
-  border-color: var(--headline);
+.search-section input,
+.search-section select,
+.search-section button {
+  flex-grow: 1;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
 }
-
-#searchForm select option {
-  background: var(--card-background);
-  color: #333;
-  padding: 8px;
-}
-
-#searchForm select option:hover {
-  background: black;
-  color: white;
-}
-
-#searchForm select:focus {
+.search-section input:focus,
+.search-section select:focus,
+.search-section button:focus {
   border: none;
   outline: none;
 }
-
-/* Style for the text input */
-.nameSearchFields {
-  width: 45%;
-  box-sizing: border-box;
-  margin-bottom: 5px;
+.search-section input {
+  flex-grow: 2;
 }
 
-#searchForm input {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  margin-top: 20px;
-  background: transparent;
-}
-
-#searchForm input:focus {
-  border: none;
-  outline: none;
-}
-
-/* Style for the button */
-.buttonSearch {
-  /*height: 10%;*/
-}
-
-.buttonSearch button {
-  background-color: var(--card-hightlight);
-  box-sizing: border-box;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-  width: 100%;
-}
-
-.buttonSearch button:hover {
+.search-section button {
   background-color: var(--headline);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.loading-span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5em;
-  margin-top: 200px;
-  animation: pulse 1.5s infinite alternate, rotate 2s linear infinite;
-  /* Add rotate animation */
+.search-section button:hover {
+  background-color: #001a3a;
 }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+/***********tags*****************/
+.tags-container {
+  padding: 20px 10px;
+}
+.tags-container .tag {
+  background: transparent;
+  padding: 1px 10px;
+  color: var(--headline);
+  border: 1px solid var(--headline);
+  border-radius: 10px;
+}
+.tags-container .tag:hover {
+  color: var(--card-highlight);
+  background: transparent;
+  box-shadow: 0 10px 6px -6px #777;
 }

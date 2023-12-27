@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 
-const SearchPage = () => {
+const SearchBar = () => {
   const [loading, setLoading] = useState(false);
   const [technicians, setTechnicians] = useState([]);
   const { register, handleSubmit, reset } = useForm();
@@ -42,50 +42,45 @@ const SearchPage = () => {
 
 
   return (
-    <div className="search-bar">
-      <div className="Search-bar">
-        <form id="searchForm" onSubmit={handleSubmit(searchForm)}>
-          <div className="selectName">
-            <label htmlFor="category">Search by:</label>
-            <select {...register("category")}>
+   <>
+    <div className="hero-section">
+        <h2>Find your Local Technician</h2>
+        <p>Search for technicians based on name, location, and more. Choose a category and location type to narrow down your search.</p>
+         <div className="search-container">
+         <form onSubmit={handleSubmit(searchForm)}>
+          <div className="search-inputs">
+            <input type="text" name="searchInput" placeholder="Enter Technician, city, country's Name...." {...register("name")} />
+            <select name="categorySelect" {...register("category")}>
               <option value="name">Technician Name</option>
               <option value="location">Location</option>
             </select>
-          </div>
-          <div className="selectLocation">
-            <label htmlFor="searchType">Search by:</label>
-            <select {...register("location_type")}>
+            <select name="locationTypeSelect" {...register("location_type")}>
               <option value="country">Country</option>
               <option value="city">City</option>
               <option value="district">District</option>
               <option value="sector">Sector</option>
               <option value="cell">Cell</option>
             </select>
-          </div>
-
-          <div className="nameSearchFields">
-            <input type="text" id="technicianName" placeholder="Search Technician Name, city, country...." {...register("name")} />
-          </div>
-          <div className="buttonSearch">
-            <button type="button" onClick={handleSubmit(searchForm)}>Search</button>
+            <button type="submit" onClick={handleSubmit(searchForm)}>Search</button>
           </div>
         </form>
+      </div>
 
-
-        <div className="tags-container">
-          <div className="tag-text">Popular:</div>
+      <div className="tags-container-hero">
           <div className="wrapper">
-            <button className="hashtag">Taylor</button>
-            <button className="hashtag">peter</button>
-            <button className="hashtag">a11y</button>
-            <button className="hashtag">kigali</button>
-            <button className="hashtag">karuruma</button>
-            <button className="hashtag">Dent repair</button>
-            <button className="hashtag">#collision</button>
-            <button className="hashtag">#painter</button>
+            <button className="tag small">Taylor</button>
+            <button className="tag small">peter</button>
+            <button className="tag small">a11y</button>
+            <button className="tag small">kigali</button>
+            <button className="tag small">karuruma</button>
+            <button className="tag small">Dent repair</button>
+            <button className="tag small">#collision</button>
+            <button className="tag small">#painter</button>
           </div>
         </div>
       </div>
+
+
       <div className="Search-output">
         {loading ? (
           <span className="loading-span"><FontAwesomeIcon icon={faSpinner} beatFade /></span>
@@ -94,9 +89,7 @@ const SearchPage = () => {
           <div className="profiles">
             {
               technicians.map(
-                //(technician, index) => (
                 (technician) => (
-                  //<Link to={{ pathname:`/technicians/${index}`, state: { technician }, }} key={index}>
                   <Link style ={{ textDecoration: 'none'}} to={`/technicians/${technician.id}`} state={{ fromHome: { technician } }}>
                     <Technician
                       full_name={technician.full_name}
@@ -113,9 +106,8 @@ const SearchPage = () => {
           </div>
         )}
       </div>
-    </div>
 
-  )
-};
+      </>
+  )};
 
-export default SearchPage
+export default SearchBar

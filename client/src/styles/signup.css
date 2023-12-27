@@ -28,7 +28,8 @@
 
 .signup1 {
   background-color: var(--background);
-  background-image: url('/public/img/auto.jpeg');
+  padding: 50px;
+  /*background-image: url('/public/img/about.jpg');*/
 
 }
 
@@ -44,6 +45,9 @@
   color: var(--hightlight);
 }
 
+.signup2 a {
+  color: var(--headline);
+}
 .form-control {
   margin-bottom: 10px;
   background-color: var(--card-background);
@@ -79,5 +83,13 @@
 @media (max-width: 450px) {
   .h-custom {
     height: 100%;
+  }
+}
+@media (max-width: 786px) {
+  .signup1{
+    display: none;
+  }
+  .signup2{
+    width: 100%;
   }
 }
