@@ -79,7 +79,10 @@ all endpoint can be found `api/v1/views` and `api/v1/auth`
 - Implementing real-time chat between users and technicians.
 - Implementing scheduling appointements users (vechicle owner) and technicians.
 
+More info about this project visit LinkedIn using this link:
+ - [Lessons from RepairRevolt Hub Development](https://www.linkedin.com/pulse/lessons-from-repairrevolt-hub-development-muhayemariya-faustine-s2c9f/)
+
 For inquiries, please contact [faustinemuhayemariya44@gmail.com](mailto:faustinemuhayemariya44@gmail.com).
 
 ### AUTHOR:
-  - [MUHAYEMARIYA FAUSTINE](https://github.com/faustine-van/AirBnB_clone/edit/master/README.md)
+  - [MUHAYEMARIYA Fautsine](https://github.com/faustine-van/AirBnB_clone/edit/master/README.md)
