@@ -1,3 +1,4 @@
+![smalllogo](https://github.com/faustine-van/repairRevolt_hub/assets/125466059/477f14ca-be77-4c60-9c7a-47ca0cfd5550)
 # Repair Revolt Hub
 
 Repair Revolt Hub is a web application designed to connect vehicle owners with nearby technicians in their local area.
@@ -16,6 +17,7 @@ This platform simplifies the process of finding and contacting skilled technicia
 - [Api](#api)
 - [Future Enhancements](#future-enhancements)
 - [Author](#author)
+![home](https://github.com/faustine-van/repairRevolt_hub/assets/125466059/c7b04ac3-8842-46c0-af8a-6fa017756b68)
 
 ## Inspiration 
 Picture yourself standing alone on the deserted streets, a place where people rarely reside. It was in the midst of this solitude that the inspiration for RepairRevolt struck, born out of a real-life scenario.
@@ -27,13 +29,19 @@ On that particular day, faced with a sudden vehicle issue in an area less freque
 ### User Authentication for Technicians
 This feature involves creating a secure system for technicians to authenticate themselves on your platform. Technicians might need to create an account, log in, and manage their profiles. Authentication ensures that only authorized users (technicians, in this case) can access certain features or data.
 
+
 ### Search functionality
 This feature involves creating a secure system for technicians to authenticate themselves on your platform. Technicians might need to create an account, log in, and manage their profiles. Authentication ensures that only authorized users (technicians, in this case) can access certain features or data.
+![search](https://github.com/faustine-van/repairRevolt_hub/assets/125466059/841c7a9f-0f7e-4b79-94fc-d795ed69d7da)
+
 
 ### Technician profile creation
 Technicians should have the ability to create and manage their profiles on the platform. This includes providing details such as their full name, bio, contact information, service offerings, and possibly even uploading a profile picture. A well-crafted profile helps end-users understand the technician's expertise and services.
 ### Auto repair service discovery
 This feature involves showcasing a variety of auto repair services offered by the technicians on your platform. Users should be able to discover and explore the range of services available. This could include services like collision repair, dent repair, tire and wheel services, etc. Each service might have its own details, and users can choose the technicians based on their specific needs.
+![create profile](https://github.com/faustine-van/repairRevolt_hub/assets/125466059/e4f4fa72-f83d-489e-9715-33563c4fa510)
+![profile](https://github.com/faustine-van/repairRevolt_hub/assets/125466059/c3b6d3a5-651b-4df0-a288-34f2a832a39f)
+
 
 ## Get started
 
